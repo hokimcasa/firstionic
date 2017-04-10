@@ -8,6 +8,8 @@ import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
 import { TestPage } from '../pages/test/test';
 import { TestDetailsPage } from '../pages/test-detail/test-detail';
+import { QRscannerPage } from '../pages/QRscanner/QRscanner';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,7 +21,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ItemDetailsPage,
     ListPage,
     TestPage,
-    TestDetailsPage
+    TestDetailsPage,
+    QRscannerPage
   ],
   imports: [
     BrowserModule,
@@ -32,12 +35,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ItemDetailsPage,
     ListPage,
     TestPage,
-    TestDetailsPage
+    TestDetailsPage,
+    QRscannerPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    BarcodeScanner
   ]
 })
 export class AppModule {}

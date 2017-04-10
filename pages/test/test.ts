@@ -14,7 +14,7 @@ export class TestPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.icons = ['flask','wifi','beer','football','basketball','paper-plane',
-                  'american-football','boat','bluetooth','bulid'];
+                  'american-football','boat','bluetooth','wifi','flask','wifi'];
     this.testItems = [];
     for(let i = 1; i<11;i++){
       this.testItems.push({
